@@ -1,8 +1,7 @@
 const test = require('assert');
 const {
-  toEstrangela,
-  calWriting,
-  estrangelaWriting
+  mapper,
+  toEstrangela
 } = require('../build/cal-estrangela');
 
 describe('CAL', () => {
@@ -115,30 +114,30 @@ describe('CAL', () => {
   describe('Mapped writing', () => {
     it('Consonants length', () => {
       test.strictEqual(
-        estrangelaWriting.consonants.length,
-        calWriting.consonants.length,
+        mapper.fromWriting.consonants.length,
+        mapper.toWriting.consonants.length,
         'Length differs'
       );
       test.ok(
-        estrangelaWriting.consonants.length > 22,
+        mapper.fromWriting.consonants.length > 22,
         'Length greater than 22'
       );
     });
     it('Vowels length', () => {
       test.strictEqual(
-        estrangelaWriting.vowels.length,
-        calWriting.vowels.length,
+        mapper.fromWriting.vowels.length,
+        mapper.toWriting.vowels.length,
         'Length differs'
       );
-      test.ok(estrangelaWriting.vowels.length > 5, 'Length greater than 5');
+      test.ok(mapper.fromWriting.vowels.length > 5, 'Length greater than 5');
     });
     it('Diacritics length', () => {
       test.strictEqual(
-        estrangelaWriting.diacritics.length,
-        calWriting.diacritics.length,
+        mapper.fromWriting.diacritics.length,
+        mapper.toWriting.diacritics.length,
         'Length differs'
       );
-      test.ok((estrangelaWriting.diacritics.length = 4), 'Length equal to 5');
+      test.ok((mapper.fromWriting.diacritics.length = 4), 'Length equal to 5');
     });
   });
 });

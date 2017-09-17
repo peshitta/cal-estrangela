@@ -26,7 +26,7 @@ Following packages are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.2.tgz](https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.2.tgz)
+[https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.3.tgz](https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.3.tgz)
 
 ## More information
 
@@ -72,20 +72,13 @@ npm run build
 ## API Reference
 
 * [cal](#module_cal)
-    * [.calWriting](#module_cal.calWriting) : <code>Writing</code>
-    * [.estrangelaWriting](#module_cal.estrangelaWriting) : <code>Writing</code>
+    * [.mapper](#module_cal.mapper) : <code>Mapper</code>
     * [.toEstrangela](#module_cal.toEstrangela) ⇒ <code>string</code>
 
-<a name="module_cal.calWriting"></a>
+<a name="module_cal.mapper"></a>
 
-### cal.calWriting : <code>Writing</code>
-CAL source writing
-
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.estrangelaWriting"></a>
-
-### cal.estrangelaWriting : <code>Writing</code>
-Estrangela destination writing
+### cal.mapper : <code>Mapper</code>
+Aramaic Mapper
 
 **Kind**: static constant of [<code>cal</code>](#module_cal)  
 <a name="module_cal.toEstrangela"></a>

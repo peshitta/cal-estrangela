@@ -10,22 +10,31 @@ import {
 } from 'estrangela-code-util';
 
 /**
+ * @private
  * CAL source writing
  * @const
  * @type { Writing }
  */
-export const calWriting = new Writing(consonants, vowels, diacritics);
+const calWriting = new Writing(consonants, vowels, diacritics);
 
 /**
+ * @private
  * Estrangela destination writing
  * @const
  * @type { Writing }
  */
-export const estrangelaWriting = new Writing(
+const estrangelaWriting = new Writing(
   eConsonants.concat('p', 's'),
   eVowels.concat([';']).concat(eEasternVowels),
   eDiacritics
 );
+
+/**
+ * Aramaic Mapper
+ * @const
+ * @type { Mapper }
+ */
+export const mapper = new Mapper(calWriting, estrangelaWriting);
 
 /**
  * Convert from CAL to Estrangela ASCII font coding
@@ -34,6 +43,6 @@ export const estrangelaWriting = new Writing(
  * @returns {string} the input word converted to Estrangela ASCII font
  */
 export const toEstrangela = word => {
-  const mappedWord = new Mapper(calWriting, estrangelaWriting).map(word);
+  const mappedWord = mapper.map(word);
   return endify(mappedWord);
 };
