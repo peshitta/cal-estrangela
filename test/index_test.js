@@ -1,5 +1,9 @@
 const test = require('assert');
-const toEstrangela = require('../build/cal-estrangela');
+const {
+  toEstrangela,
+  calWriting,
+  estrangelaWriting
+} = require('../build/cal-estrangela');
 
 describe('CAL', () => {
   describe('To Estrangela', () => {
@@ -21,7 +25,11 @@ describe('CAL', () => {
       const vocalised = toEstrangela("d'yilyid,wut,eh");
       const vocalisedExpected = 'd2y;ly;d3w;t3oh';
       test.strictEqual(word, wordExpected, 'toEstrangela_yi consonant');
-      test.strictEqual(vocalised, vocalisedExpected, 'toEstrangela_yi vocalised');
+      test.strictEqual(
+        vocalised,
+        vocalisedExpected,
+        'toEstrangela_yi vocalised'
+      );
     });
     it('Word with short Eastern (E) => (e) mapping', () => {
       const word = toEstrangela(')wld');
@@ -29,7 +37,11 @@ describe('CAL', () => {
       const vocalised = toEstrangela(')awlEd');
       const vocalisedExpected = '0ewlid';
       test.strictEqual(word, wordExpected, 'toEstrangela_yi consonant');
-      test.strictEqual(vocalised, vocalisedExpected, 'toEstrangela_yi vocalised');
+      test.strictEqual(
+        vocalised,
+        vocalisedExpected,
+        'toEstrangela_yi vocalised'
+      );
     });
     it('Word with (wu) => (uO) mapping', () => {
       const word = toEstrangela('lb(ldbbykwn');
@@ -37,7 +49,11 @@ describe('CAL', () => {
       const vocalised = toEstrangela("lab,(eld'b,ob,ayk'wun");
       const vocalisedExpected = 'leb39old2b3ab3eyk2w;J';
       test.strictEqual(word, wordExpected, 'toEstrangela_wu consonant');
-      test.strictEqual(vocalised, vocalisedExpected, 'toEstrangela_wu vocalised');
+      test.strictEqual(
+        vocalised,
+        vocalisedExpected,
+        'toEstrangela_wu vocalised'
+      );
     });
     it('Word with (wO) => (oO) mapping', () => {
       const word = toEstrangela(')bhwhy');
@@ -45,7 +61,35 @@ describe('CAL', () => {
       const wordExpected = '0bhwhY';
       const vocalisedExpected = '0eb3ahewh5Y';
       test.strictEqual(word, wordExpected, 'toEstrangela_wO consonant');
-      test.strictEqual(vocalised, vocalisedExpected, 'toEstrangela_wO vocalised');
+      test.strictEqual(
+        vocalised,
+        vocalisedExpected,
+        'toEstrangela_wO vocalised'
+      );
+    });
+    it('Word with Palestinian P', () => {
+      const word = toEstrangela(')Pbhwhy');
+      const vocalised = toEstrangela(')aPeb,ohawh_y');
+      const wordExpected = '0pbhwhY';
+      const vocalisedExpected = '0epob3ahewh5Y';
+      test.strictEqual(word, wordExpected, 'toEstrangela_wO consonant');
+      test.strictEqual(
+        vocalised,
+        vocalisedExpected,
+        'toEstrangela vocalised with P'
+      );
+    });
+    it('Word with Hebrew Shin', () => {
+      const word = toEstrangela(')Pbhwh&');
+      const wordExpected = '0pbhwhS';
+      const vocalised = toEstrangela(')aPeb,ohawh_&o');
+      const vocalisedExpected = '0epob3ahewh5Sa';
+      test.strictEqual(word, wordExpected, 'toEstrangela_wO consonant');
+      test.strictEqual(
+        vocalised,
+        vocalisedExpected,
+        'toEstrangela vocalised with P'
+      );
     });
     it('Blank word returns blank', () => {
       const word = toEstrangela('');
@@ -66,6 +110,35 @@ describe('CAL', () => {
       const word = toEstrangela(0);
       const wordExpected = 0;
       test.strictEqual(word, wordExpected, 'toEstrangela_zero');
+    });
+  });
+  describe('Mapped writing', () => {
+    it('Consonants length', () => {
+      test.strictEqual(
+        estrangelaWriting.consonants.length,
+        calWriting.consonants.length,
+        'Length differs'
+      );
+      test.ok(
+        estrangelaWriting.consonants.length > 22,
+        'Length greater than 22'
+      );
+    });
+    it('Vowels length', () => {
+      test.strictEqual(
+        estrangelaWriting.vowels.length,
+        calWriting.vowels.length,
+        'Length differs'
+      );
+      test.ok(estrangelaWriting.vowels.length > 5, 'Length greater than 5');
+    });
+    it('Diacritics length', () => {
+      test.strictEqual(
+        estrangelaWriting.diacritics.length,
+        calWriting.diacritics.length,
+        'Length differs'
+      );
+      test.ok((estrangelaWriting.diacritics.length = 4), 'Length equal to 5');
     });
   });
 });

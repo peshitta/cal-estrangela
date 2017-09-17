@@ -26,7 +26,7 @@ Following packages are available:
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.1.tgz](https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.1.tgz)
+[https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.2.tgz](https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.2.tgz)
 
 ## More information
 
@@ -70,12 +70,30 @@ npm run build
 ```
 
 ## API Reference
+
+* [cal](#module_cal)
+    * [.calWriting](#module_cal.calWriting) : <code>Writing</code>
+    * [.estrangelaWriting](#module_cal.estrangelaWriting) : <code>Writing</code>
+    * [.toEstrangela](#module_cal.toEstrangela) ⇒ <code>string</code>
+
+<a name="module_cal.calWriting"></a>
+
+### cal.calWriting : <code>Writing</code>
+CAL source writing
+
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
+<a name="module_cal.estrangelaWriting"></a>
+
+### cal.estrangelaWriting : <code>Writing</code>
+Estrangela destination writing
+
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
 <a name="module_cal.toEstrangela"></a>
 
 ### cal.toEstrangela ⇒ <code>string</code>
 Convert from CAL to Estrangela ASCII font coding
 
-**Kind**: static property of [<code>cal</code>](#module_cal)  
+**Kind**: static constant of [<code>cal</code>](#module_cal)  
 **Returns**: <code>string</code> - the input word converted to Estrangela ASCII font  
 
 | Param | Type | Description |
