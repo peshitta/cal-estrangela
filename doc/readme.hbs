@@ -43,6 +43,9 @@ E.g. u in `metul`, words imported from Greek like `Caesarea`, etc.
 
 [Estrangela ASCII font](http://www.peshitta.org/initial/software.html)
 
+For Estrangela to CAL conversion see:
+[estrangela-cal](https://github.com/peshitta/estrangela-cal)
+
 ## License
 
 [MIT](https://github.com/peshitta/cal-estrangela/blob/master/LICENSE)
