@@ -137,7 +137,7 @@ describe('CAL', () => {
         mapper.toWriting.diacritics.length,
         'Length differs'
       );
-      test.ok((mapper.fromWriting.diacritics.length = 4), 'Length equal to 5');
+      test.ok((mapper.fromWriting.diacritics.length = 4), 'Length equal to 4');
     });
   });
 });
