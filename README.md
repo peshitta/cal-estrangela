@@ -8,12 +8,13 @@
 [![devDependencies Status](https://david-dm.org/peshitta/cal-estrangela/dev-status.svg)](https://david-dm.org/peshitta/cal-estrangela?type=dev)
 [![Coverage Status](https://coveralls.io/repos/github/peshitta/cal-estrangela/badge.svg?branch=master)](https://coveralls.io/github/peshitta/cal-estrangela?branch=master)
 
-Utility to convert between
-[CAL code](http://cal1.cn.huc.edu/searching/fullbrowser.html) and
-[Estrangela](http://www.peshitta.org/initial/standard.html) ASCII font.
+Convert from [CAL code](http://cal1.cn.huc.edu/searching/fullbrowser.html) to
+[Estrangela](http://www.peshitta.org/initial/standard.html) ASCII font code
 
 ## Installation
 
+In order to use this library, [Node.js](https://nodejs.org) should be installed. 
+Then run:
 ```
 npm install cal-estrangela --save
 ```
@@ -21,20 +22,26 @@ npm install cal-estrangela --save
 Following packages are available:
 * `cal-estrangela.js` - UMD ES5 version for use in browser, node, etc.
 * `cal-estrangela.min.js` - minified version of `cal-estrangela.js`
-* `cal-estrangela.esm.js` - ES6 module for bundling with other libraries and
-applications
+* `cal-estrangela.esm.js` - ES6 module version, suitable for bundling with other 
+libraries and applications
+
+The package could also be downloaded directly from:
+[https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.0.tgz](https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.0.tgz)
 
 ## More information
 
+Note: Eastern Estrangela font has no support for standalone **i** and **u**
+vowels, without supporting **y** or **w** respectively. `toEstrangela`
+conversion may lose those vowels.
+E.g. u in `metul`, words imported from Greek like `Caesarea`, etc.
+
 [Peshitta App](https://peshitta.github.io)
 
-[Font Encoding Chart](http://www.peshitta.org/initial/standard.html)
-
-[Estrangela Font](http://www.peshitta.org/fonts/ESTRANG2.TTF)
-
-[Estrangela Keyboard Map](http://www.peshitta.org/images/Keyestr.jpg)
-
 [CAL](http://cal1.cn.huc.edu/searching/fullbrowser.html)
+
+[Estrangela Font Encoding Chart](http://www.peshitta.org/initial/standard.html)
+
+[Estrangela ASCII font](http://www.peshitta.org/initial/software.html)
 
 ## License
 
@@ -42,12 +49,12 @@ applications
 
 ## Contributing
 
-The main goal for this work is learning the Word of God as recorded by
+The final goal for this work is to learn the Word of God as recorded by
 [Peshitta](https://en.wikipedia.org/wiki/Peshitta).
-If you would like to contribute, please email
-[pshitto@gmail.com](mailto:pshitto@gmail.com) or feel free to
-[Fork](https://help.github.com/articles/fork-a-repo/) or create a
-[Pull Request](https://help.github.com/articles/about-pull-requests/).
+You are welcomed to to improve this implementation or provide feedback. Please
+feel free to [Fork](https://help.github.com/articles/fork-a-repo/), create a
+[Pull Request](https://help.github.com/articles/about-pull-requests/) or
+submit [Issues](https://github.com/peshitta/cal-estrangela/issues).
 Thank you!
 
 ## Development
@@ -60,20 +67,15 @@ npm run build
 ```
 
 ## API Reference
+<a name="module_cal.toEstrangela"></a>
 
-* [sedra.util](#sedra.module_util)
-    * [.estrangelaConsonants](#sedra.module_util.estrangelaConsonants) : <code>Array.&lt;string&gt;</code>
-    * [.estrangelaVowels](#sedra.module_util.estrangelaVowels) : <code>Array.&lt;string&gt;</code>
+### cal.toEstrangela ⇒ <code>string</code>
+Convert from CAL to Estrangela ASCII font coding
 
-<a name="sedra.module_util.estrangelaConsonants"></a>
+**Kind**: static property of [<code>cal</code>](#module_cal)  
+**Returns**: <code>string</code> - the input word converted to Estrangela ASCII font  
 
-### sedra.util.estrangelaConsonants : <code>Array.&lt;string&gt;</code>
-Estrangela consonants
+| Param | Type | Description |
+| --- | --- | --- |
+| word | <code>string</code> | input word in CAL code transliteration |
 
-**Kind**: static constant of [<code>sedra.util</code>](#sedra.module_util)  
-<a name="sedra.module_util.estrangelaVowels"></a>
-
-### sedra.util.estrangelaVowels : <code>Array.&lt;string&gt;</code>
-Estrangela vowels
-
-**Kind**: static constant of [<code>sedra.util</code>](#sedra.module_util)  
