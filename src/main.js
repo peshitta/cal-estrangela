@@ -24,8 +24,8 @@ const calWriting = new Writing(consonants, vowels, diacritics);
  * @type { Writing }
  */
 const estrangelaWriting = new Writing(
-  eConsonants.concat('p', 's'),
-  eVowels.concat([';']).concat(eEasternVowels),
+  Object.freeze(eConsonants.concat('p', 's')),
+  Object.freeze(eVowels.concat([';']).concat(eEasternVowels)),
   eDiacritics
 );
 
