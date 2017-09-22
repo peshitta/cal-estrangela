@@ -74,7 +74,6 @@ npm run build
 * [cal](#module_cal)
     * [.mapper](#module_cal.mapper) : <code>Mapper</code>
     * [.toEstrangela](#module_cal.toEstrangela) ⇒ <code>string</code>
-    * [.removeDotting](#module_cal.removeDotting) ⇒ <code>string</code>
 
 <a name="module_cal.mapper"></a>
 
@@ -93,16 +92,4 @@ Convert from CAL to Estrangela ASCII font coding
 | Param | Type | Description |
 | --- | --- | --- |
 | word | <code>string</code> | input word in CAL code transliteration |
-
-<a name="module_cal.removeDotting"></a>
-
-### cal.removeDotting ⇒ <code>string</code>
-Remove dotting (vowels and diacritics), leaving consonantal word only.
-
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-**Returns**: <code>string</code> - consonantal word  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| word | <code>string</code> | input word to be processed |
 

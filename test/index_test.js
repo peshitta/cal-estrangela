@@ -1,8 +1,7 @@
 const test = require('assert');
 const {
   mapper,
-  toEstrangela,
-  removeDotting
+  toEstrangela
 } = require('../build/cal-estrangela');
 
 describe('CAL', () => {

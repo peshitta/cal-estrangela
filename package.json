@@ -59,7 +59,7 @@
   },
   "homepage": "https://github.com/peshitta/cal-estrangela#readme",
   "dependencies": {
-    "aramaic-mapper": "^1.0.3",
+    "aramaic-mapper": "^1.0.4",
     "cal-code-util": "^1.0.5",
     "estrangela-code-util": "^1.0.3"
   },
