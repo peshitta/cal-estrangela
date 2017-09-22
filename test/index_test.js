@@ -142,16 +142,3 @@ describe('CAL', () => {
     });
   });
 });
-describe('removeDotting', () => {
-  it('Check consonantal and vocalised', () => {
-    const word = 'dqsry)-dpylypws';
-    const expected = removeDotting('dqsry)-dpylypws');
-    const vocalised = removeDotting("d'qesariya)-d,p,yilyip'wOs");
-    test.strictEqual(word, expected, 'removeDotting consonant only');
-    test.strictEqual(
-      vocalised,
-      expected,
-      'removeDotting vocalised'
-    );
-  });
-});

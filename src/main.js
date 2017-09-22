@@ -46,11 +46,3 @@ export const toEstrangela = word => {
   const mappedWord = mapper.map(word);
   return endify(mappedWord);
 };
-
-/**
- * Remove dotting (vowels and diacritics), leaving consonantal word only.
- * @static
- * @param { string } word input word to be processed
- * @returns { string } consonantal word
- */
-export const removeDotting = word => mapper.removeDotting(word);

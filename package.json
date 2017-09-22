@@ -1,6 +1,6 @@
 {
   "name": "cal-estrangela",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Convert from CAL code to Estrangela ASCII font code",
   "main": "build/cal-estrangela.js",
   "main݂Min": "build/cal-estrangela.min.js",
