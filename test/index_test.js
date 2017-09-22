@@ -1,7 +1,8 @@
 const test = require('assert');
 const {
   mapper,
-  toEstrangela
+  toEstrangela,
+  removeDotting
 } = require('../build/cal-estrangela');
 
 describe('CAL', () => {
@@ -137,7 +138,20 @@ describe('CAL', () => {
         mapper.toWriting.diacritics.length,
         'Length differs'
       );
-      test.ok((mapper.fromWriting.diacritics.length === 4), 'Length equal to 4');
+      test.ok(mapper.fromWriting.diacritics.length === 4, 'Length equal to 4');
     });
+  });
+});
+describe('removeDotting', () => {
+  it('Check consonantal and vocalised', () => {
+    const word = 'dqsry)-dpylypws';
+    const expected = removeDotting('dqsry)-dpylypws');
+    const vocalised = removeDotting("d'qesariya)-d,p,yilyip'wOs");
+    test.strictEqual(word, expected, 'removeDotting consonant only');
+    test.strictEqual(
+      vocalised,
+      expected,
+      'removeDotting vocalised'
+    );
   });
 });
