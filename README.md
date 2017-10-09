@@ -19,14 +19,14 @@ Then run:
 npm install cal-estrangela --save
 ```
 
-Following packages are available:
+Following bundles are available:
 * `cal-estrangela.js` - UMD ES5 version for use in browser, node, etc.
 * `cal-estrangela.min.js` - minified version of `cal-estrangela.js`
 * `cal-estrangela.esm.js` - ES6 module version, suitable for bundling with other 
 libraries and applications
 
 The package could also be downloaded directly from:
-[https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.6.tgz](https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.6.tgz)
+[https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.7.tgz](https://registry.npmjs.org/cal-estrangela/-/cal-estrangela-1.0.7.tgz)
 
 ## More information
 
@@ -71,22 +71,22 @@ npm run build
 
 ## API Reference
 
-* [cal](#module_cal)
-    * [.mapper](#module_cal.mapper) : <code>Mapper</code>
-    * [.toEstrangela](#module_cal.toEstrangela) ⇒ <code>string</code>
+* [calEstrangela](#module_calEstrangela)
+    * [.mapper](#module_calEstrangela.mapper) : <code>Mapper</code>
+    * [.toEstrangela](#module_calEstrangela.toEstrangela) ⇒ <code>string</code>
 
-<a name="module_cal.mapper"></a>
+<a name="module_calEstrangela.mapper"></a>
 
-### cal.mapper : <code>Mapper</code>
+### calEstrangela.mapper : <code>Mapper</code>
 Aramaic Mapper
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
-<a name="module_cal.toEstrangela"></a>
+**Kind**: static constant of [<code>calEstrangela</code>](#module_calEstrangela)  
+<a name="module_calEstrangela.toEstrangela"></a>
 
-### cal.toEstrangela ⇒ <code>string</code>
+### calEstrangela.toEstrangela ⇒ <code>string</code>
 Convert from CAL to Estrangela ASCII font coding
 
-**Kind**: static constant of [<code>cal</code>](#module_cal)  
+**Kind**: static constant of [<code>calEstrangela</code>](#module_calEstrangela)  
 **Returns**: <code>string</code> - the input word converted to Estrangela ASCII font  
 
 | Param | Type | Description |

@@ -1,4 +1,4 @@
-/** @module cal */
+/** @module calEstrangela */
 import { Writing, Mapper } from 'aramaic-mapper';
 import { allConsonants as consonants, vowels, diacritics } from 'cal-code-util';
 import {
